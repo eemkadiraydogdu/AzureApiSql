@@ -1,0 +1,6 @@
+﻿
+Scaffold-DbContext -Connection "Data Source=.\SQLEXPRESS;Initial Catalog=AzureExampleDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir "Models" -ContextDir "DB" -Context "AzureDbContext" -NoPluralize -UseDatabaseNames -Force
+
+Scaffold-DbContext -Connection "Server=10.0.4.116; Initial Catalog = HatBilesen; Persist Security Info=True; User ID = HatBilesenUser; Password = 5tgb+7ujm-; TrustServerCertificate=True" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir "Entities" -ContextDir "DB" -Context "HatBilesenDbContext" -NoPluralize -UseDatabaseNames -Force
+
+Scaffold-DbContext -Connection "Name=ConnectionStrings:SqlServer" Microsoft.EntityFrameworkCore.SqlServer -OutputDir "Models" -ContextDir "DB" -Context "AppDbContext" -NoPluralize -UseDatabaseNames -Force
